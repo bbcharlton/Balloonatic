@@ -131,17 +131,6 @@ router.post('/login', function(req, res, next) {
 
 });
 
-// Register DELETE AFTER ADMIN SETUP
-router.post('/register', function(req, res, next) {
-	bcrypt.hash(sanitize(req.body.password), 10, function(err, hash) {
-		User.create({
-			username: sanitize(req.body.username),
-			password: hash
-		});
-	});
-	res.redirect('/');
-})
-
 // Logout
 router.get('/logout', function(req, res, next) {
 	if (req.session.admin) {
