@@ -1,0 +1,43 @@
+extends layout
+
+block content
+	include partials/nav
+	div#form-content
+		#form-container
+			form#form(method='POST' action='/schedule/edit')
+				input(type='hidden', name='id', value=event.id)
+				p Location
+				input(type='text', name='location', value=event.location)
+				br
+				br
+				p Date
+				input(type='text', name='date', value=event.date)
+				br
+				br
+				p Status
+				select(name='status')
+					if event.status == 0
+						option(value='0', selected) Cancelled
+						option(value='1') Confirmed
+						option(value='2') Completed
+						option(value='3') Tentative
+					else if event.status == 1
+						option(value='0') Cancelled
+						option(value='1', selected) Confirmed
+						option(value='2') Completed
+						option(value='3') Tentative
+					else if event.status == 2
+						option(value='0') Cancelled
+						option(value='1') Confirmed
+						option(value='2', selected) Completed
+						option(value='3') Tentative
+					else if event.status == 3
+						option(value='0') Cancelled
+						option(value='1') Confirmed
+						option(value='2') Completed
+						option(value='3', selected) Tentative
+				br
+				br
+				button(type=submit)
+					| Update Event
+	include partials/fixed-footer

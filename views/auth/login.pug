@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	include ../partials/nav
+	div#form-content
+		#form-container
+			form#form(method='POST' action='/login')
+				p Username
+				input(type='text', name='username', placeholder='Enter username...')
+				br
+				br
+				p Password
+				input(type='password', name='password', placeholder='Enter password...')
+				br
+				br
+				button(type=submit)
+					| Login
+	include ../partials/fixed-footer

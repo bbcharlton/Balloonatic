@@ -1,0 +1,54 @@
+extends layout
+
+block content
+	include partials/nav
+	div#schedule-content
+		.container
+			#event-top
+				h1#event-heading Event Schedule
+				if session
+					a(href='/schedule/add')
+						i#addEvent.fa.fa-plus-circle
+			each event in events
+				.card
+					h3 Location
+					p= event.location
+					br
+					h3 Date
+					p= event.date
+					.status
+						if event.status == 0
+							i.fa.fa-3x.fa-circle
+							i.fa.fa-3x.fa-times-circle.cancelled
+							br
+							p Cancelled 
+						else if event.status == 1
+							i.fa.fa-3x.fa-circle.confirmed
+							br
+							p Confirmed 
+						else if event.status == 2
+							i.fa.fa-3x.fa-circle
+							i.fa.fa-3x.fa-check-circle.completed
+							br
+							p Completed 
+						else if event.status == 3
+							i.fa.fa-3x.fa-circle
+							i.fa.fa-3x.fa-minus-circle.tentative
+							br
+							p Tentative 
+					if session
+						.controls
+							br
+							hr
+							br
+							a.edit(href='/schedule/edit/' + event.id) Edit
+							a.delete(href='/schedule/delete/' + event.id) Delete
+		section#schedule
+			.container
+				h1 Here is where you can catch The Balloonatic this year.
+				h3 If you live in or near one of these locations and would like to fly with The Balloonatic while he is in your area, contact us.
+				a#cta-button2(href='/#contact') Contact Us
+	if events.length > 1
+		include partials/footer
+	else
+		include partials/fixed-footer

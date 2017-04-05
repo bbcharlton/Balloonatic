@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	include partials/nav
+	div#form-content
+		#form-container
+			form#form(method='POST' action='/schedule/add')
+				p Location
+				input(type='text', name='location', placeholder='Enter location...')
+				br
+				br
+				p Date
+				input(type='text', name='date', placeholder='Enter date...')
+				br
+				br
+				p Status
+				select(name='status')
+					option(value='0') Cancelled
+					option(value='1') Confirmed
+					option(value='2') Completed
+					option(value='3') Tentative
+				br
+				br
+				button(type=submit)
+					| Add Event
+	include partials/fixed-footer

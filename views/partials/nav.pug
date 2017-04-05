@@ -1,0 +1,35 @@
+nav
+	ul.navbar
+		.container
+			h1
+				a#logo(href='/') Balloonatic
+			li
+				a.nav-link(href='/#contact') Contact Us
+			li 
+				a.nav-link(href='/#about') About Us
+			li 
+				a.nav-link(href='/schedule') Schedule
+			li 
+				a.nav-link(href='#') Prices
+			if session
+				li 
+					a.nav-link.logout(href='/logout') Logout
+	ul.navbar-hamburger
+		.container
+			h1
+				a#logo(href='/') Balloonatic
+			li
+				i#nav-hamburger.fa.fa-2x.fa-bars
+		ul.navbar-dropdown
+			li
+				a.nav-hidden-link(href='/#contact') Contact Us
+			li 
+				a.nav-hidden-link(href='/#about') About Us
+			li 
+				a.nav-hidden-link(href='/schedule') Schedule
+			li 
+				a.nav-hidden-link(href='#') Prices
+			if session
+				li 
+					a.nav-hidden-link.logout(href='/logout') Logout
+		
