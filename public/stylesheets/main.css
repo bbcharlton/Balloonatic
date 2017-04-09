@@ -43,6 +43,8 @@ section {
 	font-size: 40px;
 	padding: 60px 0;
 	text-align: center;
+	border-top: solid 10px #2E7788;
+	border-bottom: solid 10px #2E7788;
 	background: linear-gradient(135deg, rgba(110,175,190,1) 0%, rgba(56,146,166,1) 100%);
 }
 
@@ -134,9 +136,9 @@ select {
 .content {
 	display: block;
 	text-align: center;
-	padding: 0 15px;
+	padding: 45vh 15px;
+	height: auto;
 	margin: 0 auto;
-	padding-top: 45vh;
 }
 
 .navbar {
@@ -311,7 +313,6 @@ select {
 
 #front, #safety, #about, #contact {
 	width: 100%;
-	height: 100vh;
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,10 +334,6 @@ select {
 
 #contact {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/balloons9.jpg');
-}
-
-#front .content, #safety .content, #about .content, #contact .content {
-	display: none;
 }
 
 #cta-button, #cta-button2 {
