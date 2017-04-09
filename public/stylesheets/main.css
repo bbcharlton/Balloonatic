@@ -43,8 +43,8 @@ section {
 	font-size: 40px;
 	padding: 60px 0;
 	text-align: center;
-	border-top: solid 10px #2E7788;
-	border-bottom: solid 10px #2E7788;
+	border-top: solid 10px #F3B61F;
+	border-bottom: solid 10px #F3B61F;
 	background: linear-gradient(135deg, rgba(110,175,190,1) 0%, rgba(56,146,166,1) 100%);
 }
 
@@ -263,7 +263,7 @@ select {
 }
 
 .left-poly {
-	width: 150px;
+	width: 0px;
     float: left;
     margin-top: -100px;
     border-bottom: 100px solid #F3B61F;
@@ -271,14 +271,14 @@ select {
 }
 
 .right-poly {
-	width: 150px;
+	width: 0px;
     float: right;
     border-top: 100px solid #F3B61F;
     border-left: 150px solid transparent;
 }
 
 .right-poly2 {
-	width: 150px;
+	width: 0px;
     float: right;
     margin-top: -100px;
     border-bottom: 100px solid #F3B61F;
@@ -412,6 +412,12 @@ select {
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
 }
 
+#pic:hover {
+	-webkit-animation: spin 0.3s linear;
+    -moz-animation: spin 0.3s linear;
+    animation: spin 0.3s linear;
+}
+
 #contact-details h3 {
 	text-align: center;
 }
@@ -470,6 +476,24 @@ select {
 
 ::-webkit-scrollbar { 
     display: none; 
+}
+
+@-moz-keyframes spin { 
+	100% { 
+		-moz-transform: rotate(360deg); 
+	} 
+}
+
+@-webkit-keyframes spin { 
+	100% { 
+		-webkit-transform: rotate(360deg); 
+	} 
+}
+
+@keyframes spin { 
+	100% { 
+		-webkit-transform: rotate(360deg); transform:rotate(360deg); 
+	} 
 }
 
 @-webkit-keyframes link {
