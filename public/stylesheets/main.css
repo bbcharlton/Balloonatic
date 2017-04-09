@@ -320,19 +320,19 @@ select {
 
 #front {
 	margin-top: 75px;
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/balloons10.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../images/balloons10.jpg');
 }
 
 #safety {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/balloons5.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../images/balloons5.jpg');
 }
 
 #about {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/balloons6.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../images/balloons6.jpg');
 }
 
 #contact {
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/balloons9.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../images/balloons9.jpg');
 }
 
 #cta-button, #cta-button2 {
