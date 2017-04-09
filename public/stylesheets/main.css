@@ -202,7 +202,6 @@ select {
 	padding: 15px;
 	margin: 15px 0;
 	position: relative;
-	display: none;
 	background: linear-gradient(135deg, rgba(110,175,190,1) 0%, rgba(56,146,166,1) 100%);
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 }
