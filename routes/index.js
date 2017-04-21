@@ -20,6 +20,15 @@ router.get('/', function(req, res, next) {
 	}
 });
 
+// Prices Route
+router.get('/prices', function(req, res, next) {
+	if (req.session.admin) {
+		res.render('prices', { title: 'Prices - Balloonatic', session: req.session });
+	} else {
+		res.render('prices', { title: 'Prices - Balloonatic' });
+	}
+});
+
 // Schedule Route
 router.get('/schedule', function(req, res, next) {
 	Event.findAll({

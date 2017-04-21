@@ -2,10 +2,10 @@ extends layout
 
 block content
 	include partials/nav
-	div#schedule-content
+	.alt-content
 		.container
-			#event-top
-				h1#event-heading Event Schedule
+			.top
+				h1.heading Event Schedule
 				if session
 					a(href='/schedule/add')
 						i#addEvent.fa.fa-plus-circle
@@ -45,7 +45,7 @@ block content
 							a.delete(href='/schedule/delete/' + event.id) Delete
 		.left-poly
 		.right-poly2
-		section#schedule
+		section.alt
 			.container
 				h1 Here is where you can catch The Balloonatic this year.
 				h3 If you live in or near one of these locations and would like to fly with The Balloonatic while he is in your area, contact us.

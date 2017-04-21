@@ -48,7 +48,7 @@ section {
 	background: linear-gradient(135deg, rgba(110,175,190,1) 0%, rgba(56,146,166,1) 100%);
 }
 
-section#schedule {
+section.alt {
 	font-size: 40px;
 	padding: 60px 0;
 	text-align: center;
@@ -198,24 +198,67 @@ select {
 	padding-top: 15px;
 }
 
+.alt-content {
+	width: 100%;
+	margin-top: 75px;
+	background-color: #EEE;
+}
+
 .card {
 	padding: 15px;
 	margin: 15px 0;
 	position: relative;
+	overflow: hidden;
 	background: linear-gradient(135deg, rgba(110,175,190,1) 0%, rgba(56,146,166,1) 100%);
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.card h1 {
+	font-size: 75px;
+	line-height: 150px;
+	display: inline-block;
 }
 
 .card h3 {
 	margin: 0;
 }
 
-.card i {
+.card i:not(.fa-user) {
 	position: absolute;
+}
+
+.price-icon {
+	float: right;
+	line-height: 150px;
+}
+
+.price-description {
+	font-size: 20px;
+	padding-top: 15px;
+	border-top: solid 1px #EEE;
+}
+
+.card .fa-user {
+	margin-left: 15px;
 }
 
 .card .fa-times-circle, .card .fa-check-circle {
 	z-index: 1;
+}
+
+.top {
+	margin-top: 75px;
+	overflow: hidden;
+}
+
+.top + .card {
+	margin-top: 0px;
+}
+
+.heading {
+	color: #333;
+	float: left;
+	padding: 15px 0;
 }
 
 .cancelled {
@@ -270,6 +313,14 @@ select {
     border-right: 150px solid transparent;
 }
 
+.left-poly {
+	width: 0px;
+    float: left;
+    margin-top: -100px;
+    border-bottom: 100px solid #F3B61F;
+    border-right: 150px solid transparent;
+}
+
 .right-poly {
 	width: 0px;
     float: right;
@@ -310,7 +361,7 @@ select {
 	clear: both;
 }
 
-#front, #safety, #about, #contact {
+#front, #safety, #about, #contact, #prices {
 	width: 100%;
 	background-attachment: fixed;
     background-position: center;
@@ -333,6 +384,11 @@ select {
 
 #contact {
 	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../images/balloons9.jpg');
+}
+
+#prices {
+	margin-top: 75px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../images/balloons.jpg');
 }
 
 #cta-button, #cta-button2 {
@@ -426,27 +482,6 @@ select {
 	color: #F3B61F;
 	font-size: 18px;
 	text-decoration: underline;
-}
-
-#schedule-content {
-	width: 100%;
-	margin-top: 75px;
-	background-color: #EEE;
-}
-
-#event-top {
-	margin-top: 75px;
-	overflow: hidden;
-}
-
-#event-top + .card {
-	margin-top: 0px;
-}
-
-#event-heading {
-	color: #333;
-	float: left;
-	padding: 15px 0;
 }
 
 #addEvent {
