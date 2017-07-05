@@ -3,9 +3,7 @@ var path = require('path');
 var Sequelize = require('sequelize');
 var basename = path.basename(module.filename);
 var db = {};
-var sequelize = new Sequelize('balloonatic', 'root', '');
-
-// process.env.DB, process.env.DB_USER, process.env.DB_PASSWORD
+var sequelize = new Sequelize(DATABASE, DATABASE_USER, DATABASE_USER_PASSWORD);
 
 fs
     .readdirSync(__dirname)
